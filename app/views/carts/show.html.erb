@@ -1,5 +1,9 @@
 <section class="cart-show">
 
+<% if enhanced_cart == [] %>
+  <h1 class="alert alert-info" role="alert" style="text-align: center">Empty cart please click <%= link_to 'home', products_path %> and add an item to cart
+  </h1>
+<% else %>
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
@@ -48,5 +52,5 @@
       <% end %>
     </div>
   </div>
-
+<% end %> 
 </section>
